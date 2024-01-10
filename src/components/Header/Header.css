@@ -1,0 +1,46 @@
+.header-content {
+    display: flex;
+    justify-content: flex-end;
+    height: 135px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 65px;
+}
+
+.header-tag {
+    border: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+}
+
+.header-button {
+    border-radius: 16px;
+    background: rgba(0, 122, 255, 0.15);
+    border: none;
+    width: 140px;
+    height: 60px;
+    flex-shrink: 0;
+    color: #007AFF;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    transform: scale(1.1);
+}
+
+.current-page {
+    text-decoration: underline #007AFF;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+}

@@ -1,0 +1,21 @@
+.icons-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 40px;
+}
+
+.icon-container {
+    transition: transform .2s;
+    pointer-events: "none";
+    user-select: "none";
+}
+
+.icon-container:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.icon-container:hover {
+    transform: scale(1.1);
+}
