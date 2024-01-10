@@ -19,3 +19,16 @@
 .content-right {
     width: 15%;
 }
+
+@media only screen and (max-width: 1200px) {
+    .content-left,.content-right {
+        display: none;
+    }
+
+    .content-body {
+        width: 100%;
+        padding-left: 35px;
+        padding-right:;
+    }
+
+  }
