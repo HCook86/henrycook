@@ -1,3 +1,42 @@
+.name-container {
+    margin-left: 10%;
+    padding-bottom: 20px;
+}
+
 .henry-cook {
     font-size: 120px;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: 100;
+    margin-top: -70px;
+}
+
+.tablet-social-container {
+    display: none;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .name-container {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .tablet-social-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .tablet-social-line {
+        width: 80%;
+    }
 }

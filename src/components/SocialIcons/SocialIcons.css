@@ -3,6 +3,10 @@
     flex-direction: column;
     position: fixed;
     gap: 40px;
+    z-index: 5;
+    background-color: #EDEDED;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .icon-container {
@@ -18,4 +22,14 @@
 
 .icon-container:hover {
     transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1200px) {
+    .icons-container {
+        flex-direction: row;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 70px;
+        padding-right: 70px;
+    }    
 }

@@ -8,6 +8,7 @@ function PageStructure (props) {
         <div className="content-wrapper">
             <div className="content-left">
                 <SocialIcons />
+                <hr className="vertical-line"/>
             </div>
             <div className="content-body">
                 <Header />
