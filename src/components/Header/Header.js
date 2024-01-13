@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import React, { useState } from "react";
 import "./Header.css";
 
 function Header() {
@@ -7,6 +7,12 @@ function Header() {
     
     const url = window.location.href.split('/');;
     const path = url.pop() || url.pop();
+
+    const [hambuergerStatus, setHamburgerStatus] = useState();
+
+    function handleHamburger() {
+        console.log("HAMBURGER TOGGLED");
+    }
 
     return (
         <header>
@@ -16,8 +22,16 @@ function Header() {
                     <button onClick={() => navigate("/about")} className={"header-tag " + (path === "about" ? "current-page": "")}>About</button>
                     <button onClick={() => navigate("/projects")} className={"header-tag " + (path === "projects" ? "current-page": "")}>Projects</button>
                     <button onClick={() => navigate("/contact")} className={"header-button " + (path === "contact" ? "current-page": "")}>Contact</button>
+                    <div className="hamburger-icon" onClick={handleHamburger}>
+                        <span className="hamburger-bar-1"/>
+                        <span className="hamburger-bar-2"/>
+                        <span className="hamburger-bar-3"/>
+                    </div>
                 </div>
             </nav>
+            <div className="hamburger-menu">
+
+            </div>
         </header>
     )
 }
