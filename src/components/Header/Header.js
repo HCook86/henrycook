@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
+import { motion } from "framer-motion"
+
 import "./Header.css";
 
 function Header() {
@@ -8,10 +10,30 @@ function Header() {
     const url = window.location.href.split('/');;
     const path = url.pop() || url.pop();
 
-    const [hambuergerStatus, setHamburgerStatus] = useState();
+    const [hamburgerStatus, setHamburgerStatus] = useState(false);
 
     function handleHamburger() {
-        console.log("HAMBURGER TOGGLED");
+        if (hamburgerStatus) {
+            setHamburgerStatus(false);
+        }
+        else {
+            setHamburgerStatus(true);
+        }
+    }
+
+    const variants_top = {
+        open: { opacity: 1, x: 0 },
+        closed: { rotate: 45 },
+    }
+
+    const variants_center = {
+        open: { opacity: 1, x: 0 },
+        closed: { opacity: 0},
+    }
+
+    const variants_bottom = {
+        open: { opacity: 1, x: 0 },
+        closed: { rotate: -45 },
     }
 
     return (
@@ -23,9 +45,9 @@ function Header() {
                     <button onClick={() => navigate("/projects")} className={"header-tag " + (path === "projects" ? "current-page": "")}>Projects</button>
                     <button onClick={() => navigate("/contact")} className={"header-button " + (path === "contact" ? "current-page": "")}>Contact</button>
                     <div className="hamburger-icon" onClick={handleHamburger}>
-                        <span className="hamburger-bar-1"/>
-                        <span className="hamburger-bar-2"/>
-                        <span className="hamburger-bar-3"/>
+                        <motion.span className="hamburger-bar-1" style={{ originX: 0.04 }}  variants={variants_top} animate={hamburgerStatus ? "closed" : "open"}/>
+                        <motion.span className="hamburger-bar-2" variants={variants_center} animate={hamburgerStatus ? "closed" : "open"}/>
+                        <motion.span className="hamburger-bar-3" style={{ originX: 0.02 }}  variants={variants_bottom} animate={hamburgerStatus ? "closed" : "open"}/>
                     </div>
                 </div>
             </nav>
