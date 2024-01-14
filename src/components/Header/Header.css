@@ -7,6 +7,8 @@
     align-items: center;
     box-sizing: border-box;
     gap: 65px;
+    z-index: 100;
+    position: relative;
 }
 
 .header-tag {
@@ -21,7 +23,7 @@
 
 .header-button {
     border-radius: 16px;
-    background: rgba(0, 122, 255, 0.15);
+    background: #007aff26;
     border: none;
     width: 140px;
     height: 60px;
@@ -68,6 +70,7 @@
     .header-content {
         justify-content: flex-end;
         padding-right: 30px;
+        height: 80px;
     }
     .header-tag {
         display: none;
