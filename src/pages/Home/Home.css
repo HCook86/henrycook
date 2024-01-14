@@ -56,15 +56,11 @@ html, body {
         flex-direction: column;
         margin-top: 60px;
     }
-
-    .tablet-social-line {
-        width: 80%;
-    }
 }
 
 @media only screen and (max-width: 800px) {
     .animation-container {
-        margin-top: 290px;
+        margin-top: 280px;
     }
     .henry-cook {
         font-size: max(12vw, 70px); 
@@ -78,4 +74,15 @@ html, body {
         font-size: max(7.5vw, 40px);
         margin-top: -50px;
     }   
+}
+
+@media only screen and (max-height: 350px) {
+    .henry-cook {
+        font-size: 80px;
+        margin-top: -25px;
+    }
+    .subtitle {
+        margin-top: -65px;
+        font-size: 45px;
+    }
 }

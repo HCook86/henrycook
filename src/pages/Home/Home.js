@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import GLOBE from '../../vanta.globe.js'
 import * as THREE from "three";
 
+import Loader from "../../components/Loader/Loader.js";
 import PageStructure from "../../components/PageStructure/PageStructure";
 import SocialIcons from "../../components/SocialIcons/SocialIcons.js";
 
@@ -36,22 +37,21 @@ function Home() {
 
     return (
         <>
-            <div className="animation-container" ref={vantaRef}>
-
-                    </div>
+            <div className="animation-container" ref={vantaRef}></div>
             <PageStructure>
-                <div className="name-container" >
-                    <div>
-                        <h1 className="henry-cook">Henry Cook</h1>
-                        <p className="subtitle">Web developer</p>
+                <Loader>
+                    <div className="name-container" >
+                        <div>
+                            <h1 className="henry-cook">Henry Cook</h1>
+                            <p className="subtitle">Web developer</p>
+                        </div>
                     </div>
-                </div>
-                <div className="tablet-social-container">
-                    <hr className="tablet-social-line"/>
-                    <SocialIcons />
-                </div>
+                    <div className="tablet-social-container">
+                        <SocialIcons />
+                    </div>
+                </Loader>
             </PageStructure>
-        </>
+        </>    
     )
 }
 
