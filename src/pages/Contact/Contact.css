@@ -1,0 +1,13 @@
+.contact-container {
+    display: flex;
+    background-color: blue;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contact-form {
+    background-color: white;
+    border-radius: 15px;
+    width: 50%;
+    height: 200px;
+}
