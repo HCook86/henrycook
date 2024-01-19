@@ -12,6 +12,15 @@ function Home() {
     const [vantaEffect, setVantaEffect] = useState(0);
     const vantaRef = useRef(null);
 
+    /* Disable scroll */
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = "scroll"
+        };
+    }, []);
+
+    /* 3D Animation */
     useEffect(() => {
         if (!vantaEffect) {
         setVantaEffect(
