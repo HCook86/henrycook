@@ -1,9 +1,27 @@
 html, body {
   margin: 0px;
   font-family: 'Inter';
+  background-color: #EDEDED;
 }
 
 .page-title {
   font-size: 80px;
   margin-top: 10px;
+  margin-bottom: 50px;
+  text-decoration: underline #007AFF;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 10px; 
+}
+
+@media only screen and (max-width: 1200px) {
+  .page-title {
+    margin-left: 45px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .page-title {
+    font-size: 60px;
+    margin-left: 15px;
+  }
 }

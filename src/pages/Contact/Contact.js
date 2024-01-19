@@ -5,8 +5,8 @@ import PageStructure from "../../components/PageStructure/PageStructure";
 function Contact() {
     return (
         <PageStructure>
-            <h1>Contact</h1>
-            <div className="contact-container">
+            <h1 className="page-title">Contact</h1>
+            {/*<div className="contact-container">
                 <div>
                     <a>asd</a>
                 </div>
@@ -15,7 +15,7 @@ function Contact() {
                         <input />
                     </form>
                 </div>
-            </div>
+            </div>*/}
         </PageStructure>
     )
 }
