@@ -11,7 +11,9 @@ function PageStructure (props) {
                 <hr className="vertical-line"/>
             </div>
             <div className="content-body">
+
                 <Header />
+
                 {props.children}
             </div>
             <div className="content-right"></div>

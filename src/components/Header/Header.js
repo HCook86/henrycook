@@ -38,6 +38,7 @@ function Header() {
         <header>
             <nav>
                 <div className="header-content">
+                    {/*
                     <button onClick={() => navigate("/")} className={"header-tag " + (url.length === 2 ? "current-page": "")}>Home</button>
                     <button onClick={() => navigate("/about")} className={"header-tag " + (path === "about" ? "current-page": "")}>About</button>
                     <button onClick={() => navigate("/projects")} className={"header-tag " + (path === "projects" ? "current-page": "")}>Projects</button>
@@ -47,9 +48,10 @@ function Header() {
                         <motion.span className="hamburger-bar-2" variants={variants_center} animate={hamburgerStatus ? "closed" : "open"}/>
                         <motion.span className="hamburger-bar-3" style={{ originX: 0.02 }}  variants={variants_bottom} animate={hamburgerStatus ? "closed" : "open"}/>
                     </div>
+                    */}
                 </div>
             </nav>
-            {hamburgerStatus &&
+            {/*{hamburgerStatus &&
                 <div className="hamburger-menu">
                     <div>
                         <button onClick={() => navigate("/")} className={"hamburger-header-tag " + (url.length === 2 ? "current-page": "")}>Home</button>
@@ -58,7 +60,7 @@ function Header() {
                         <button onClick={() => navigate("/contact")} className={"hamburger-header-button " + (path === "contact" ? "current-page": "")}>Contact</button>
                     </div>
                 </div>
-            }   
+            }   */}
         </header>
     )
 }
