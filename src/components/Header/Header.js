@@ -66,10 +66,12 @@ function Header() {
                         }}
                         className="hamburger-menu"
                     >
-                        <div>
-                            <button onClick={() => navigate("/")} className={"hamburger-header-tag " + (url.length === 2 ? "current-page": "")}>Home</button>
-                            <button onClick={() => navigate("/about")} className={"hamburger-header-tag " + (path === "about" ? "current-page": "")}>About</button>
-                            <button onClick={() => navigate("/projects")} className={"hamburger-header-tag " + (path === "projects" ? "current-page": "")}>Projects</button>
+                        <div className="hamburger-options-container">
+                            <div className="hamburger-options-tags">
+                                <button onClick={() => navigate("/")} className={"hamburger-header-tag " + (url.length === 2 ? "current-page": "")}>Home</button>
+                                <button onClick={() => navigate("/about")} className={"hamburger-header-tag " + (path === "about" ? "current-page": "")}>About</button>
+                                <button onClick={() => navigate("/projects")} className={"hamburger-header-tag " + (path === "projects" ? "current-page": "")}>Projects</button>
+                            </div>
                             <button onClick={() => navigate("/contact")} className={"hamburger-header-button " + (path === "contact" ? "current-page": "")}>Contact</button>
                         </div>
                     </motion.div>

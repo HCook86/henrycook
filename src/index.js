@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home.js";
 import About from "./pages/About/About.js";
 import Projects from "./pages/Projects/Projects.js";
 import Contact from './pages/Contact/Contact.js';
+import NotFound from './pages/NotFound/NotFound.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +21,7 @@ root.render(
         <Route path="/about" element={ <About/> } />
         <Route path="/projects" element={ <Projects/> } />
         <Route path="/contact" element={ <Contact/> } />
-        <Route path="*" element={<h1>404</h1>} />
+        <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
