@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import "./Header.css";
 
@@ -49,16 +49,32 @@ function Header() {
                     </div>
                 </div>
             </nav>
-            {hamburgerStatus &&
-                <div className="hamburger-menu">
-                    <div>
-                        <button onClick={() => navigate("/")} className={"hamburger-header-tag " + (url.length === 2 ? "current-page": "")}>Home</button>
-                        <button onClick={() => navigate("/about")} className={"hamburger-header-tag " + (path === "about" ? "current-page": "")}>About</button>
-                        <button onClick={() => navigate("/projects")} className={"hamburger-header-tag " + (path === "projects" ? "current-page": "")}>Projects</button>
-                        <button onClick={() => navigate("/contact")} className={"hamburger-header-button " + (path === "contact" ? "current-page": "")}>Contact</button>
-                    </div>
-                </div>
-            }   
+            <AnimatePresence>
+                {hamburgerStatus &&
+                    <motion.div 
+                        initial={{ 
+                            width: 300,
+                            opacity: 0, 
+                        }}
+                        animate={{ 
+                            width: "100%",
+                            opacity: 1, 
+                        }}
+                        exit={{
+                            width: 300,
+                            opacity: 0, 
+                        }}
+                        className="hamburger-menu"
+                    >
+                        <div>
+                            <button onClick={() => navigate("/")} className={"hamburger-header-tag " + (url.length === 2 ? "current-page": "")}>Home</button>
+                            <button onClick={() => navigate("/about")} className={"hamburger-header-tag " + (path === "about" ? "current-page": "")}>About</button>
+                            <button onClick={() => navigate("/projects")} className={"hamburger-header-tag " + (path === "projects" ? "current-page": "")}>Projects</button>
+                            <button onClick={() => navigate("/contact")} className={"hamburger-header-button " + (path === "contact" ? "current-page": "")}>Contact</button>
+                        </div>
+                    </motion.div>
+                }   
+            </AnimatePresence>
         </header>
     )
 }
