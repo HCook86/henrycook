@@ -51,6 +51,7 @@
     display: none;
     width: 30px;
     height: 22px;
+    cursor: pointer;
 }
 
 .hamburger-bar-1, .hamburger-bar-2, .hamburger-bar-3 {
@@ -68,7 +69,6 @@
     height: 100%;
     z-index: 900;
     width: 100%;
-    max-width: 600px;
     display: none;
     flex-direction: column;
     gap: 10%;

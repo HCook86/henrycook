@@ -1,6 +1,7 @@
 import React from 'react';
 
 import "./Bento.css";
+import Toolkit from '../Toolkit/Toolkit';
 
 function useWindowDimensions() {
     const [width, setWidth] = React.useState(window.innerWidth);
@@ -29,7 +30,7 @@ function Bento () {
     const bento_element = [
         {   
             id: 1,
-            content: <h2>Flask starter</h2>,
+            content: <h2 className='about-presentation'>I'm <span className="about-name">Henry Cook</span></h2>,
             column: "1",
             row: "1",
             column_responsive: "",
@@ -45,7 +46,11 @@ function Bento () {
         },
         {
             id: 3,
-            content: <h2>PLACEHOLDER</h2>,
+            content: 
+                <>
+                    <p>A student</p>
+                </>
+            ,
             column: "1 / span 2",
             row: "2 / span 2",
             column_responsive: "1 / span 2",
@@ -53,7 +58,10 @@ function Bento () {
         },
         {
             id: 4,
-            content: <h2>Cardgames</h2>,
+            content: 
+                <div>
+                    <Toolkit />
+                </div>,
             column: "3",
             row: "2 / span 2",
             column_responsive: "1 / span 2",

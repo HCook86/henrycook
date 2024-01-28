@@ -9,6 +9,7 @@
 }
 
 .bento-box {
+    box-sizing: border-box;
     border-radius: 15px;
     background: whitesmoke;
     padding: 20px;
@@ -19,6 +20,18 @@
 
 .bento-box:hover {
     transform: scale(1.02);
+}
+
+.henry-img {
+    width: 200px;
+}
+
+.about-name {
+    color: #007AFF;
+}
+
+.about-presentation {
+    font-size: 2.5em;
 }
 
 @media only screen and (max-width: 1200px) {

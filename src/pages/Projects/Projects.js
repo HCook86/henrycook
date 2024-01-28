@@ -6,7 +6,6 @@ function Projects () {
     return (
         <PageStructure>
             <h1 className="page-title">Projects</h1>
-            <Bento />
         </PageStructure>
     )
 }
