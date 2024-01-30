@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import "./Header.css";
@@ -20,6 +20,13 @@ function Header() {
             setHamburgerStatus(true);
         }
     }
+
+    useEffect(() => {
+        const html = document.querySelector("html");
+        if (html) {
+            document.body.style.overflow = hamburgerStatus ? "hidden" : "auto";
+        }
+      }, [hamburgerStatus]); 
 
     const variants_top = {
         open: { opacity: 1, x: 0 },
@@ -72,7 +79,7 @@ function Header() {
                                 <button onClick={() => navigate("/about")} className={"hamburger-header-tag " + (path === "about" ? "current-page": "")}>About</button>
                                 <button onClick={() => navigate("/projects")} className={"hamburger-header-tag " + (path === "projects" ? "current-page": "")}>Projects</button>
                             </div>
-                            <button onClick={() => navigate("/contact")} className={"hamburger-header-button " + (path === "contact" ? "current-page": "")}>Contact</button>
+                            <button onClick={() => navigate("/contact")} className={"hamburger-header-button"}>Contact</button>
                         </div>
                     </motion.div>
                 }   

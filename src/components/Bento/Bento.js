@@ -5,11 +5,9 @@ import Toolkit from '../Toolkit/Toolkit';
 
 function useWindowDimensions() {
     const [width, setWidth] = React.useState(window.innerWidth);
-    const [height, setHeight] = React.useState(window.innerHeight);
   
     const updateWidthAndHeight = () => {
       setWidth(window.innerWidth);
-      setHeight(window.innerHeight);
     };
   
     React.useEffect(() => {
@@ -19,13 +17,12 @@ function useWindowDimensions() {
 
     return {
       width,
-      height,
     }
   }
   
 
 function Bento () {
-    const { width, height } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
     const bento_element = [
         {   
@@ -33,16 +30,16 @@ function Bento () {
             content: <h2 className='about-presentation'>I'm <span className="about-name">Henry Cook</span></h2>,
             column: "1",
             row: "1",
-            column_responsive: "",
-            row_responsive: "",
+            column_responsive: "1 / span 2",
+            row_responsive: "1",
         },
         {
             id: 2,
             content: <h2>Nat</h2>,
             column:"2 / span 2",
             row: "1", 
-            column_responsive: "2",
-            row_responsive: "1",
+            column_responsive: "1 / span 2",
+            row_responsive: "4",
         },
         {
             id: 3,
@@ -65,7 +62,7 @@ function Bento () {
             column: "3",
             row: "2 / span 2",
             column_responsive: "1 / span 2",
-            row_responsive: "",
+            row_responsive: "5",
         }
     ]
     
@@ -74,9 +71,7 @@ function Bento () {
             {
                 bento_element.map((item) => 
                     <div key={item.id} className="bento-box" style= {width > 800 ? {gridColumn:item.column, gridRow:item.row} : {gridColumn:item.column_responsive, gridRow:item.row_responsive}}>
-                        <a>
-                            {item.content}
-                        </a>    
+                        {item.content}  
                     </div>
                 )
             }    

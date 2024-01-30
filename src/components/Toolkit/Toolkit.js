@@ -7,6 +7,7 @@ import Html from "./assets/html.png";
 import Css from "./assets/css.svg";
 import Git from "./assets/git.png";
 import Flask from "./assets/flask.png";
+import SQL from "./assets/sql.png";
 
 function Toolkit() {
     return (
@@ -40,6 +41,10 @@ function Toolkit() {
                 <div className="toolkit-item">
                     <img className="toolkit-img" src={Css} alt="Css"/>
                     <span>Css</span>
+                </div>
+                <div className="toolkit-item" >
+                    <img className="toolkit-img" src={SQL} alt="SQL"/>
+                    <span>SQL</span>
                 </div>
             </div>
         </>    
