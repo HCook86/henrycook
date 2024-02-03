@@ -8,7 +8,10 @@ function Contact() {
             <h1 className="page-title">Contact</h1>
             {/*<div className="contact-container">
                 <div>
-                    <a>asd</a>
+                    <h2>Contact me at:</h2>
+                    <ul>
+                        <li><a href="mailto:contact@henrycook.net">Preguntas aquí</a></li>
+                    </ul>
                 </div>
                 <div className="contact-form">
                     <form>

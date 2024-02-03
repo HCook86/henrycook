@@ -1,0 +1,13 @@
+.project-card {
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: whitesmoke;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}

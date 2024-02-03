@@ -1,8 +1,10 @@
+import "./Project.css";
 
-function Project() {
+function Project(props) {
     return (
-        <div>
-            <h2>Project</h2>
+        <div className="project-card">
+            <h2 className="project-title">{props.title}</h2>
+            {props.children}
         </div>
     )
 }
