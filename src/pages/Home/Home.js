@@ -52,7 +52,7 @@ function Home() {
                     <div className="name-container" >
                         <div>
                             <h1 className="henry-cook">Henry Cook</h1>
-                            <p className="subtitle">Web developer</p>
+                            <p className="subtitle">Aerospace Engineer *</p>
                         </div>
                     </div>
                     <div className="tablet-social-container">

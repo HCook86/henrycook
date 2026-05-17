@@ -3,6 +3,8 @@
 
 ## Available Scripts
 
+Portfolio website hosted at henrycook.net
+
 In the project directory, you can run:
 
 ### `npm start`
