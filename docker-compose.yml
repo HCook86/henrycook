@@ -3,7 +3,7 @@ version: '3.8'
 services:
   nginx:
     build:
-      context: ./webserver
+      context: .
       dockerfile: Dockerfile
     container_name: webserver
     volumes:
