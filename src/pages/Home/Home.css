@@ -1,0 +1,84 @@
+.name-container {
+    margin-left: 10%;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    z-index: 500;
+    position: relative;
+}
+
+.henry-cook {
+    font-size: 120px;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: 100;
+    margin-top: -70px;
+}
+
+.tablet-social-container {
+    display: none;
+    width: 100%;
+}
+
+.animation-container {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    margin-top: 120px;
+}
+
+@media only screen and (max-width: 1200px) {
+    
+    .animation-container {
+        margin-top: 160px;
+    }
+
+    .name-container {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .tablet-social-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .animation-container {
+        margin-top: 280px;
+    }
+    .henry-cook {
+        font-size: max(12vw, 70px); 
+        text-align: center;
+        margin-top: -15px;
+    }
+
+    .subtitle {
+        width: 100%;
+        text-align: center;
+        font-size: max(7.5vw, 40px);
+        margin-top: -50px;
+    }   
+}
+
+@media only screen and (max-height: 350px) {
+    .henry-cook {
+        font-size: 80px;
+        margin-top: -25px;
+    }
+    .subtitle {
+        margin-top: -65px;
+        font-size: 45px;
+    }
+}

@@ -1,0 +1,64 @@
+.icons-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 40px;
+    z-index: 5;
+    background-color: #EDEDED;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.icon-container {
+    transition: transform .2s;
+    pointer-events: "none";
+    user-select: "none";
+    color: black;
+}
+
+.icon-container:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.icon-container:hover {
+    transform: scale(1.1);
+}
+
+.social-icon-img {
+    width: 60px;
+    height: 60px;
+}
+
+.fiverr-logo {
+    pointer-events: none;
+    user-select: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .icons-container {
+        flex-direction: row;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding: 15px;
+        backdrop-filter: blur(10px);
+        background-color: transparent;
+    }    
+}
+
+@media only screen and (max-width: 800px) {
+    .icons-container {
+        position: fixed;
+        bottom: 0px;
+        padding: 15px;
+        width: 100%;
+        justify-content: center;
+        backdrop-filter: blur(20px);
+        background-color: transparent;
+    }
+
+    .social-icon-img {
+        width: 45px;
+        height: 45px;
+    }
+}

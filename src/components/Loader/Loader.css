@@ -1,0 +1,15 @@
+.loader-container {
+    position: fixed;
+    width: 100%;
+    height: calc(100% + 20px);
+    left: 0px;
+    top: -20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EDEDED;
+}
+
+.loader-content {
+    margin-top: 45vh;
+}
