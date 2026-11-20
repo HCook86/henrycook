@@ -1,0 +1,46 @@
+# Dependencies (reinstalled in container)
+node_modules
+.npm
+.pnpm-store
+.yarn
+**/.pnpm
+
+# Build output (generated in container)
+dist
+build
+.out
+.next
+.nuxt
+coverage
+.nyc_output
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Sensitive files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.secrets
+
+# Development & IDE
+.git
+.gitignore
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Docker & CI files
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+.github
+.gitlab-ci.yml   

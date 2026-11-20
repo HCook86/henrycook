@@ -10,30 +10,12 @@ services:
       - ./webserver/nginx.conf:/etc/nginx/nginx.conf
     expose:
       - "80"
+    labels:
+      caddy: henrycook.net, www.henrycook.net
+      caddy.reverse_proxy: "{{upstreams 80}}"
     networks:
-      - internal_network
-
-  auto-ssl-proxy:
-    image: docker.io/valian/docker-nginx-auto-ssl
-    container_name: auto-ssl-proxy
-    restart: on-failure
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - ssl_data:/etc/resty-auto-ssl
-    environment:
-      ALLOWED_DOMAINS: 'henrycook.net'
-      SITES: 'henrycook.net=nginx:80'
-      FORCE_HTTPS: 'true'
-    depends_on:
-      - nginx
-    networks: 
-      - internal_network
-
-volumes:
-  ssl_data:
+      - proxy
 
 networks:
-  internal_network:
-    driver: bridge
+  proxy:
+    external: true
